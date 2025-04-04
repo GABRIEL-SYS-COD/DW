@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura♪♪♪blog</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .fila {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        .column {
+            flex: 1;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        .menu {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+
+        }
+        nav a{
+            text-decoration: none;
+        }
+        
+        .footer {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 10px;         
+            max-height: auto;
+            /* flex: auto; */
+        }
+        .footer .column p {
+            text-align: center;
+        }
+        .images img {
+            width: 100%;
+            margin-bottom: 10px;
+           
+            
+        }
+        .text-fila {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+        }
+        .content {
+            flex: 1; /* Hace que esta sección ocupe el espacio restante */
+            display: flex;
+            flex-direction: column;
+        }
+        .text-fila .imagen-max-ancho {
+            max-width: 500px; /* Puedes ajustar este valor según tus necesidades */
+            width: 100%; /* Asegura que la imagen se ajuste al contenedor */
+            height: auto; /* Mantiene la proporción de la imagen */
+        }
+
+        a {
+            text-align: center;
+        }
+
+        p {
+            text-align: left;
+        }
+        .column ul a{
+            text-align: left;
+        }
+
+
+        span {
+        display: inline-block;
+        text-shadow: 0 0 0 rgb(223, 3, 3);
+        animation: smoky 7s 6s both;
+        }
+
+        span:nth-child(even){
+        animation-name: smoky-mirror;
+        }
+
+        @keyframes smoky {
+        60% {
+            text-shadow: 0 0 40px whitesmoke;
+        }
+        to {
+            transform:
+            translate3d(15rem,-8rem,0)
+            rotate(-40deg)
+            skewX(70deg)
+            scale(1.5);
+            text-shadow: 0 0 20px whitesmoke;
+            opacity: 0;
+        }
+        }
+
+        @keyframes smoky-mirror {
+        60% {
+            text-shadow: 0 0 40px whitesmoke; }
+        to {
+            transform:
+            translate3d(18rem,-8rem,0)
+            rotate(-40deg) 
+            skewX(-70deg)
+            scale(2);
+            text-shadow: 0 0 20px whitesmoke;
+            opacity: 0;
+        }
+        }
+
+        @for $item from 1 through 21 {
+        span:nth-of-type(#{$item}){ 
+            animation-delay: #{(3 + ($item/10))}s; 
+        }
+        
+        }
+    </style>
+</head>
+<body>
+    <!-- Fila para el titulo -->
+    <div class="fila">
+        <div class="column">
+            <h1 style="text-align: center;">Islandia</h1>
+           <H1> <span>G</span><span>E</span><span>R</span><span></span><span>S</span><span>O</span><span>N</span>&nbsp<span>G</span><span>Z</span><span>&nbsp;</span><span>T</span><span>e</span><span>x</span><span>t</span><span>&nbsp;</span><span>E</span><span>f</span><span>f</span><span>e</span><span>c</span><span>t</span></H1>
+        </div>
+    </div>
+
+    <!-- Fila para el menu -->
+    <div class="menu">
+        <div class="column">
+            <nav>
+                <a href="#">Inicio</a> | 
+                <a href="#">Acerca de</a> | 
+                <a href="#">Contacto</a>
+            </nav>
+        </div>
+    </div>
+    
+
+    <!-- Contenido principal -->
+    <main class="content">
+        
+        <div class="fila">
+            <!-- Primera columna con 3 imágenes -->
+            <div class="column images">
+                <div><h3 style="text-align: center;">Etiquetas</h3></div><br>
+                <aside>
+                <a href="https://mochilaexpres.com/que-ver-en-islandia/#:~:text=Si%20te%20preguntas%20qu%C3%A9%20ver%20en%20Islandia%2C%20no,senderismo%2C%20las%20cascadas%20m%C3%A1s%20bonitas%20y%20muchos%20m%C3%A1s.">25 IMPRESCINDIBLES que ver en Islandia [+mapa]</a>
+                <br><hr>
+                <a href="https://escritorislandia.com/costumbres-islandia/">Costumbres Islandia</a>
+                <br><hr>
+                <a href="https://www.comunicatech.com/costumbres-islandesas/31971">Descubre las Fascinantes Costumbres Islandesas: Tradiciones y Cultura Únicas</a>
+                <br><hr>
+                <a href="https://arcticyeti.es/fiestas-de-islandia/">Fiestas tradicionales y festivales en Islandia</a>
+                <br><hr>
+                <a href="https://www.vuelaviajes.com/tradiciones-de-islandia/">Tradiciones de Islandia-vuelaviajes</a>
+                <br><hr>
+
+                <div><h3 style="text-align: center;">Imagenes</h3></div>
+                <img src="img/griffinlamb12.png" alt="Imagen 1">
+                <img src="img/imagen2.jpg" alt="Imagen 2">
+                <img src="img/imagen3.jpg" alt="Imagen 3">
+                <!-- etiquetas=bio,?,? -->
+            </aside>
+            </div>
+            
+            <!-- Segunda columna con 3 filas de texto -->
+            <div class="column">
+                <div class="column"><h2 style="text-align: center;">Costumbres y Tradiciones de islandia</h2></div>
+                <br>
+                <div class="text-fila" id="cat1">
+                    <h3>Introducción a las Costumbres Islandesas: Un Vistazo a la Cultura de Islandia</h3>
+                    <p>La cultura de Islandia es rica y variada, influenciada por su historia, geografía y el estilo de vida de sus habitantes. Las costumbres islandesas reflejan un profundo respeto por la naturaleza y una fuerte conexión con las tradiciones nórdicas. Desde la literatura hasta las festividades, cada aspecto de la vida islandesa está impregnado de una singularidad que la distingue de otros países.</p>
+                </div>
+                <div class="text-fila" id="cat2">Texto 2 en columna 2</div>
+                <div class="text-fila" id="ca3">Texto 3 en columna 2</div>
+            </div>
+
+            <!-- Tercera columna con 3 filas de texto -->
+            <section class="column">
+                <aside class="column">
+                    <div><h3 style="text-align: center;">Categoria</h3></div>
+                    <ul style="text-align: left">
+                        <li><a href="#cat1">cat1</a></li>
+                        <li><a href="#cat2">cat2</a></li>
+                        <li><a href="#cat3">cat3</a></li>
+                        <li><a href="#cat4">cat4</a></li>
+                        <li><a href="#cat5">cat5</a></li></ul>
+                    
+                </aside>
+                <br>
+                <div class="column"><h3 style="text-align: center;">Artículos Destacados</h3></div><br>
+                <article class="text-fila">
+                    <h4>Lago Myvatn </h4>
+                    <p> La zona del <b>lago Myvatn y sus alrededores</b> representa el lado más aventurero de Islandia, con volcanes activos, amenazantes cráteres y áreas geotérmicas que podría ser el escenario para una película sobre Marte.</p>
+                    <p>Parajes inhóspitos y seductores al mismo tiempo, donde se puede pasear entre campos de lava como el de Dimmuborgir, ver el cráter Viti o relajarse en las aguas termales de Myvatn Baths, la alternativa barata a la Blue Lagoon.</p>
+                    <p>Los más intrépidos se podrán hacer una <b>excursión hasta el volcán Askja,</b> uno de los más alucinantes de Islandia.</p>
+                    <img src="img/zona geotermal de Hverir – Námafjall.jpg" alt="zona geotermal de Hverir Námafjall" class="imagen-max-ancho">
+                </article>
+                <article class="text-fila">
+                    <h4>Península de Snaefellsnes</h4>
+                    <p>Se suele decir que la Península de Snaefellsnes es como una Islandia en miniatura, ya que se pueden encontrar una muestra de todas las maravillas naturales de la isla. Quizás suene exagerado, pero es cierto que cuenta con escenarios de película con cascadas, volcanes, playas y acantilados que cortan la respiración.</p>
+                    <p>También es una zona fantástica para admirar la fauna local como ballenas, focas e incluso (si tenéis suerte) podéis ver orcas en libertad.</p>
+                    <img src="img/Kirkjufellsfoss.jpg" alt="Kirkjufellsfoss" class="imagen-max-ancho">
+                </article>
+                <article class="text-fila">
+                    <h4>Frailecillos de Dyrhólaey</h4>
+                    <p>Este entrañable pájaro a medio camino entre un pingüino y un loro es el animal nacional de Islandia. Habitan los acantilados, creando colonias bastante grandes, pero no son fáciles de avistar. El lugar más accesible para poder verlos es en Dyrhólaey, cerca de Vik</p>
+                    <p>Allí anidan miles de aves marinas y en verano tenéis bastantes probabilidades de verlos, ya que es la época de apareamiento. Si os queréis asegurar ver los frailecillos, podéis reservar una excursión desde Grundarfjörður o la isla de frailecillos de Husavik.</p>
+                    <img src="img/Frailecillos de Dyrhólaey.jpg" alt="Frailecillos de Dyrhólaey" class="imagen-max-ancho">
+                </article>
+                <article class="text-fila">
+                    <h4>Contemplar focas</h4>
+                    <p>Otro de los animales más atractivos de ver en Islandia son las focas. Hay dos lugares que os prometo que las podréis ver con seguridad, ya que acoge dos grandes colonias. Uno es Illugastadir, en la península de Vastsnes. Hay una pequeña isla paralela a la costa con un buen puñado de focas.</p>
+                    <p>El otro lugar es Ytri Tunga, en la Península de Snaefellsnes. Aquí se pueden ver a realmente pocos metros, aunque hay menos ejemplares.</p>
+                    <img src="img/Ytri Tunga.jpg" alt="Ytri Tunga" class="imagen-max-ancho">
+                </article>
+                <article class="text-fila">
+                    <h4>Cañón Stuðlagil </h4>
+                    <p>¿Te imaginas un cañón con aguas de color verde esmeralda y gigantescas columnas de basalto? Islandia no deja de sorprender con nuevos paisajes y joyas de naturaleza, en ocasiones vírgenes y desconocidos. Es lo que ocurrió con el cañón Stuðlagil, descubierto por puro azar en 2006 al realizar obras para una presa fluvial.</p>
+                    <p>Haz un hueco en tu itinerario para hacer una ruta andando por los alrededores de este mágico lugar. Sin duda, una de las rutas de senderismo más bonitas de Islandia.</p>
+                    <img src="img/Cañón Stuðlagil.jpg" alt="Cañón Stuðlagil" class="imagen-max-ancho">
+                </article>
+                
+            </section>
+           
+        </div>
+    </main>
+
+    <!-- Fila para el footer -->
+    <footer class="footer">
+        <div class="column">
+            <p>Footer de la Pagina</p>
+            <p>🏴‍☠️🏴‍☠️🏴🏴🏴‍☠️🏴‍☠️</p>
+        </div>
+    </footer>
+</body>
+</html>
